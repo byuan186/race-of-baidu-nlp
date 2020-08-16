@@ -10,4 +10,4 @@
 ####       （3）单一性问题，输出句子差异性小，分组加入相似性惩罚项，diverse search
 
 #### tips：
-#### 在训练计算decoder的loss时，刚开始是只mask那些被padding的字，当又mask那些nmk的字，提高loss结果的准确性，而且分数会提升1%
+#### 在训练计算decoder的loss时，刚开始是只mask那些被padding的位置，当又mask那些UNK，即后续做loss计算的时候又增加了被mask的位置，结果分数会提升1%
