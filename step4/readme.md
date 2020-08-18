@@ -4,7 +4,7 @@
 ##### 一开始使用pgn的结果才30分左右，成绩甚是尴尬，后来我发现论文中decoder使用context的方法和tensorflow官网上机器翻译模型不一样
 
 + 机器翻译模型是把context_vector和decoder输入词的词向量拼接后作为gru单元的输入，gru的输出接入一个全连接层，算出预测词的分布
-`
+```
 class BahdanauAttention(tf.keras.layers.Layer):
   def __init__(self, units):
     super(BahdanauAttention, self).__init__()
@@ -25,5 +25,5 @@ class BahdanauAttention(tf.keras.layers.Layer):
     context_vector = tf.reduce_sum(context_vector, axis=1)
 
     return context_vector, attention_weights
-`
+```
 + 论文中PGN的gru单元输入就只有输入词的词向量，context_vector是和gru的输出做拼接，再输入全连接层进行预测，论文里是有两层全连接层。
