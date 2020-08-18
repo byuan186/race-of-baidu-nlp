@@ -1,13 +1,8 @@
-### 开始逐步构建seq2seq模型
+### 开始逐步构建seq2seq模型baseline
 #### 1.Teachering Forcing
 #### 优点：训练阶段，decoder进行预测时防止出现某时间步预测错误导致后面都跟着错
 #### 缺点：模型泛化能力差
 
-#### 2.beam search
-#### 优点：改进了之前的greedy search algorithm，因为贪心搜索可能会造成达到局部最优解的情况，所以每次返回2~3个可以改进
-#### 缺点：（1）概率相乘可能造成数据下溢，使用log改进
-####       （2）倾向生成短的序列，使用归一化对数似然函数改进
-####       （3）单一性问题，输出句子差异性小，分组加入相似性惩罚项，diverse search
 
 #### tips：
-#### 在训练计算decoder的loss时，刚开始是只mask那些被padding的位置，当又mask那些UNK，即后续做loss计算的时候又增加了被mask的位置，结果分数会提升1%
+#### 在训练阶段计算decoder的loss时，刚开始是只mask那些被padding的位置，我后续尝试mask那些UNK，结果分数会提升1%
