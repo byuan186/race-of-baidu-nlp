@@ -27,3 +27,5 @@ class BahdanauAttention(tf.keras.layers.Layer):
     return context_vector, attention_weights
 ```
 + 论文中PGN的gru单元输入就只有输入词的词向量，context_vector是和gru的输出做拼接，再输入全连接层进行预测，论文里是有两层全连接层。
++ 网上甚至还有不仅把context vector和decoder输入concat作为gru的输入，还把context vector和gru的输出作拼接，经过两个线性层，来计算输出单词的概率分布。
+#### 不过最后一种我没有尝试，感兴趣的同学可以去跑跑看结果
