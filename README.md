@@ -5,4 +5,4 @@
 ## step2 构建seq2seq模型baseline
 ## step3 在模型中加入Beam search
 ## step4 在模型中加入Point net 和 Coverage
-## step5 在paddle平台上运行的代码
+## step5 在paddle版本的代码和实验调参的记录
