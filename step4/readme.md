@@ -1,5 +1,5 @@
 #### 1.虽然Beam Search 效果比贪心搜索好一些，但是仍然会面临以下问题：OOV（未登录词）和 词语重复问题
-#### 2.指针生成网络首先引入指针网络（Pointer Network），用于从原文中复制单词，解决OOV问题，然后引入Coverage机制，解决摘要中语句重复的问题。
+#### 2.指针生成网络首先引入指针网络（Pointer Network），用于从原文中复制单词，解决OOV问题，然后引入Coverage机制，解决摘要中语句重复的问题（coverage机制在notebook中）
 #### 心得体会：
 ##### 一开始使用pgn的结果才30分左右，成绩甚是尴尬，后来我发现论文中decoder使用context的方法和tensorflow官网上机器翻译模型不一样
 
