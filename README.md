@@ -1,5 +1,5 @@
 # race-of-baidu-nlp
-问答推理与摘要比赛top3
+问答推理与摘要比赛top3，
 记录自己在参见比赛时的代码文档
 ## step1 数据预处理和词向量训练
 ## step2 构建seq2seq模型baseline
